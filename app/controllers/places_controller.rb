@@ -15,7 +15,7 @@ before_action :authenticate_user!, only: [:new, :create]
   end
 
   def show
-    @place = Place.find(param[:id])
+    @place = Place.find(params[:id])
   end
 
   private
