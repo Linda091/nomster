@@ -1,5 +1,8 @@
-<h2>Sign up</h2>
+<br/><br/>
 
+<div class="booyah-box col-10 offset-1">
+<h2>Sign Up for NYC Eats</h2>
+<br /><br />
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
@@ -10,8 +13,10 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit, 'Sign Up', class: "btn btn-primary"%>
   </div>
 <% end %>
-
+<br/>
+<h6> Already on NYC Eats? </h6>
 <%= render "devise/shared/links" %>
+</div>
