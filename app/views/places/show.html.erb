@@ -55,7 +55,7 @@
            <%= f.input :message %>
            <%= f.input :rating, as: :select, collection: Comment::RATINGS %>
       </div>
-    
+
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <%= f.submit "Save Changes", class: 'btn btn-primary' %>
