@@ -70,6 +70,15 @@
 </button>
 </div>
 
+<div class ="clear"></div>
+
+<div class="row">
+  <% @place.photos.each do |photo| %>
+    <%= image_tag photo.picture %>
+    <%= photo.caption %>
+  <% end %>
+</div>
+
 <!-- Modal for Comments -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="MyModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
