@@ -1,21 +1,27 @@
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
-      <%= image_tag 'TWS1_SweetChick6.jpg', class:'d-block img-fluid' %>
+      <%= image_tag 'brunch.jpg', class:'d-block img-fluid' %>
       <div class="carousel-caption d-none d-md-block">
-        <h3>Find the best chicken and waffles here </h3>
+        <h3>Brunch Parties Done Right</h3>
       </div>
     </div>
     <div class="carousel-item">
-      <%= image_tag '2artbar.jpg', class:'d-block img-fluid' %> 
+      <%= image_tag 'burger.jpg', class:'d-block img-fluid' %> 
       <div class="carousel-caption d-none d-md-block">
-        <h3>Best stop for happy hour</h3>
+        <h3>Delicious Burgers, Fries and Shakes</h3>
       </div>
     </div>
     <div class="carousel-item">
-      <%= image_tag 'Macondo_slider2.jpg', class:'d-block img-fluid' %>
+      <%= image_tag 'eating.jpg', class:'d-block img-fluid' %>
       <div class="carousel-caption d-none d-md-block">
-        <h3>Find the best magaritas and fish tacos</h3>
+        <h3>Cozy Spot for Happy Hour</h3>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag 'pizza.jpg', class:'d-block img-fluid' %>
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Come for the Drinks, Stay for the Pizza</h3>
       </div>
     </div>
   </div>
@@ -28,10 +34,11 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+<br/><br/>
 
-
+<div class="row">
 <% @places.each do |place| %>
-  <div class = "booyah-box col-10 offset-1">
+  <div class = "booyah-box col-sm-6 col-sm-6 text-center">
     <h1><%= link_to place.name, place_path(place) %></h1><br />
     <i><%= place.address %></i><br /><br />
     <p><%= place.description %></p><br /> 
@@ -40,8 +47,8 @@
       <small><%= place.user.email %></small>
     <% end %>
 
-<% if place.comments.present? %>
-    <div class="col-12">
+  <% if place.comments.present? %>
+    <div class="col-sm-12">
       <blockquote>
         <% if place.comments.last.humanized_rating.present? %>
           <b><%= place.comments.last.humanized_rating %></b> -
@@ -53,6 +60,8 @@
 <%end%>
   </div>
 <% end %>
+</div>
+<br/>
 
 <%= will_paginate @places, class: "flickr_pagination" %>
 

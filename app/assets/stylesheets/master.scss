@@ -11,7 +11,7 @@
   border-color:#e4e4e4 #bebebd #bebebd #e4e4e4;
   margin-top: 10px;
   margin-bottom: 15px;
-  padding: 20px 
+  padding: 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -20,18 +20,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body{
-  background:image_url('food.png');
+  background:image_url('light-grey.png');
   font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
 }
 
 .navbar {
-  background: image_url('food.png');
+  background: image_url('light-grey.png');
   box-shadow: 0px 1px 3px #000000;
 }
 
-.navbar-inverse .navbar-brand{
-   color: white;
+.navbar a {
+  color: black;
+}
+.navbar-inverse .navbar-brand {
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     font-family: 'Heebo', sans-serif;
     font-size: 26px;
@@ -45,21 +46,21 @@ body{
   .flickr_pagination a, .flickr_pagination span, .flickr_pagination em {
     padding: 0.2em 0.5em; }
   .flickr_pagination .disabled {
-    color: #aaaaaa; }
+    color: black; }
   .flickr_pagination .current {
     font-style: normal;
     font-weight: bold;
-    color: #ff0084; }
+    color: black; }
   .flickr_pagination a {
-    border: 1px solid #dddddd;
-    color: #0063dc;
+    border: 1px solid black;
+    color: black;
     text-decoration: none; }
     .flickr_pagination a:hover, .flickr_pagination a:focus {
-      border-color: #003366;
+      border-color: black;
       background: #0063dc;
       color: white; }
   .flickr_pagination .page_info {
-    color: #aaaaaa;
+    color: black;
     padding-top: 0.8em; }
   .flickr_pagination .previous_page, .flickr_pagination .next_page {
     border-width: 2px; }
@@ -83,7 +84,11 @@ body{
     clear:both;
   }
 
-  blockquote {
+  .booyah-box a{
+    color: black;
+  }
+
+blockquote {
   background: #f9f9f9;
   border-left: 10px solid #ccc;
   margin: 1.5em 10px;
